@@ -52,9 +52,10 @@ Run the tests in the `test` directory.
   npm test
 ```
 
-# Debugging
+## Debugging
 
 Run with debugging output on:
 
 ```bash
   DEBUG='loopback:component:model-extender' npm test
+```
