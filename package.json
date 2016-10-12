@@ -1,0 +1,27 @@
+{
+  "name": "loopback-component-model-extender",
+  "version": "0.0.0",
+  "description": "Loopback Component Model Extender",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullcube/loopback-component-model.extender.git"
+  },
+  "keywords": [
+    "loopback"
+  ],
+  "author": "Tom Kirkpatrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullcube/loopback-component-model.extender/issues"
+  },
+  "homepage": "https://github.com/fullcube/loopback-component-model.extender#readme",
+  "dependencies": {
+    "app-root-path": "2.0.1",
+    "debug": "2.2.0",
+    "lodash.kebabcase": "4.1.1"
+  }
+}
