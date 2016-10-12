@@ -4,7 +4,7 @@
   "description": "Loopback Component Model Extender",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,9 @@
     "app-root-path": "2.0.1",
     "debug": "2.2.0",
     "lodash.kebabcase": "4.1.1"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.1.2"
   }
 }
