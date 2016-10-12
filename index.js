@@ -1,6 +1,6 @@
 'use strict'
 
-const kebabCase = require('lodash.kebabCase')
+const kebabCase = require('lodash.kebabcase')
 const fs = require('fs')
 const path = require('path')
 const debug = require('debug')('loopback:component:model-extender')
