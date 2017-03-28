@@ -1,6 +1,6 @@
 {
   "name": "loopback-component-model-extender",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Loopback Component Model Extender",
   "main": "index.js",
   "scripts": {
