@@ -22,7 +22,7 @@ module.exports = (app, options) => {
     Model._componentsLoaded = true
 
     // Set up logging class.
-    let log = Model.log = options.log || console
+    let log = options.log || console
     if (typeof log === 'string') {
       log = require(log)
     }
