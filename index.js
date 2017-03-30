@@ -49,7 +49,8 @@ module.exports = (app, options) => {
 
     // Determine the path to look for model a customisation file.
     const basePath = path.join(appRoot.toString(), (options.basePath || '.'))
-    const componentsPath = Model.settings.components || `common/models/${kebabCase(Model.modelName)}`
+    const modelPath = options.modelPath || `common/models`
+    const componentsPath = Model.settings.components || `${modelPath}/${kebabCase(Model.modelName)}`
     const requirePath = path.join(basePath, componentsPath)
 
     try {
