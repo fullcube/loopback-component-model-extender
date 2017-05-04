@@ -1,5 +1,7 @@
 # Loopback Component Model Extender
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/fullcube/loopback-component-model-extender.svg)](https://greenkeeper.io/)
+
 [![CircleCI](https://circleci.com/gh/fullcube/loopback-component-model-extender.svg?style=svg)](https://circleci.com/gh/fullcube/loopback-component-model-extender) [![Dependencies](http://img.shields.io/david/fullcube/loopback-component-model-extender.svg?style=flat)](https://david-dm.org/fullcube/loopback-component-model-extender) [![Coverage Status](https://coveralls.io/repos/github/fullcube/loopback-component-model-extender/badge.svg?branch=master)](https://coveralls.io/github/fullcube/loopback-component-model-extender?branch=master)
 
 A loopback component that enables componentized model customisation.
