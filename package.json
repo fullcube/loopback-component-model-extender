@@ -27,7 +27,8 @@
   "dependencies": {
     "app-root-path": "2.0.1",
     "debug": "2.6.8",
-    "lodash.kebabcase": "4.1.1"
+    "lodash.kebabcase": "4.1.1",
+    "require-all": "2.2.0"
   },
   "devDependencies": {
     "@bubltechnology/customizable-commit-analyzer": "1.0.2-0",
@@ -41,7 +42,6 @@
     "loopback-boot": "2.24.0",
     "mocha": "3.4.2",
     "nyc": "11.0.2",
-    "require-all": "2.2.0",
     "semantic-release": "6.3.6",
     "strong-error-handler": "2.1.0"
   },
