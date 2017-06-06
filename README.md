@@ -1,5 +1,7 @@
 # Loopback Component Model Extender
 
+[![CircleCI](https://circleci.com/gh/fullcube/loopback-component-model-extender.svg?style=svg)](https://circleci.com/gh/fullcube/loopback-component-model-extender) [![Dependencies](http://img.shields.io/david/fullcube/loopback-component-model-extender.svg?style=flat)](https://david-dm.org/fullcube/loopback-component-model-extender) [![Coverage Status](https://coveralls.io/repos/github/fullcube/loopback-component-model-extender/badge.svg?branch=master)](https://coveralls.io/github/fullcube/loopback-component-model-extender?branch=master)
+
 A loopback component that enables componentized model customisation.
 
 By default, loopback allows you to customise models by providing a `model.js` file in the same directory as `model.json`. Whilst this is sufficient for small applications it can be cumbersome for larger applications with complex models.
