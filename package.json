@@ -4,6 +4,8 @@
   "description": "Loopback Component Model Extender",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
     "test": "nyc  --reporter=lcov --reporter=text --reporter=text-summary mocha test/*test.js",
     "test:watch": "npm run test -- -w"
   },
@@ -28,10 +30,13 @@
   "devDependencies": {
     "chai": "3.5.0",
     "cors": "2.8.3",
+    "eslint": "3.19.0",
+    "eslint-config-fullcube": "2.0.35-latest-20170602-0428.0",
     "loopback": "3.8.0",
     "loopback-boot": "2.24.0",
     "mocha": "3.1.2",
     "nyc": "11.0.2",
+    "require-all": "2.2.0",
     "strong-error-handler": "2.1.0"
   }
 }

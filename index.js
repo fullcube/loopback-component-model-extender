@@ -1,10 +1,12 @@
+/* eslint global-require: 0 */
+
 'use strict'
 
 const kebabCase = require('lodash.kebabcase')
-const fs = require('fs')
 const path = require('path')
 const debug = require('debug')('loopback:component:model-extender')
 const appRoot = require('app-root-path')
+const requireAll = require('require-all')
 
 module.exports = (app, options) => {
   options = options || {}
@@ -23,27 +25,24 @@ module.exports = (app, options) => {
 
     // Set up logging class.
     let log = options.log || console
+
     if (typeof log === 'string') {
       log = require(log)
     }
 
     // Apply models customisations.
-    function customizeModel(sourcePath) {
-      fs.readdirSync(sourcePath).forEach(sourceFile => {
-        const filePath = path.join(sourcePath, sourceFile)
-
-        if (path.extname(sourceFile) === '.js') {
-          debug('Loading customization script %s', filePath)
-          const code = require(filePath)
-
+    function customizeModel(dirname) {
+      requireAll({
+        dirname,
+        resolve: code => {
+          debug('Loading customization script %s', code)
           if (typeof code === 'function') {
             debug('Customizing model %s', Model.modelName)
-            code(Model)
+            return code(Model)
           }
-          else {
-            debug('Skipping model file %s - `module.exports` is not a function', sourceFile)
-          }
-        }
+          debug('Skipping model file %s - `module.exports` is not a function', code)
+          return code
+        },
       })
     }
 
@@ -60,7 +59,7 @@ module.exports = (app, options) => {
       // anything other than 'file not found' should be a hard fail.
       if (err.code !== 'ENOENT') {
         log.error(`Failure loading component path: ${requirePath}`, err.stack)
-        process.exit(1)
+        throw err
       }
     }
   }
