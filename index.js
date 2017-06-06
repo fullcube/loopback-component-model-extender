@@ -34,6 +34,7 @@ module.exports = (app, options) => {
     function customizeModel(dirname) {
       requireAll({
         dirname,
+        recursive: false,
         resolve: code => {
           debug('Loading customization script %s', code)
           if (typeof code === 'function') {
