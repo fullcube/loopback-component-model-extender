@@ -35,6 +35,7 @@ module.exports = (app, options) => {
       requireAll({
         dirname,
         recursive: false,
+        filter:/^([^\.].*)\.(js|ts|json)?$/,
         resolve: code => {
           debug('Loading customization script %s', code)
           if (typeof code === 'function') {
