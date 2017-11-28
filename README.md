@@ -16,6 +16,8 @@ Models can specify an alternate location by setting `Model.settings.components` 
 
 All paths are relative to your project root (or the value of the `basePath` component configuration option).
 
+If you are using server-only models, set `modelPath` to `server/models`
+
 All model customization carried out by this component takes place after all models have been initialized and attached to the app (but before boot scripts run). This ensures that all models are already available on the app at the time the customizations are applied.
 
 ## Installation
@@ -46,7 +48,9 @@ All model customization carried out by this component takes place after all mode
 
   [String] : Directory containing loopback application. *(default: null)*
 
+- `modelPath`
 
+  [String] : Directory containing loopback models. *(default: 'common/models')*
 
 ## Testing
 
